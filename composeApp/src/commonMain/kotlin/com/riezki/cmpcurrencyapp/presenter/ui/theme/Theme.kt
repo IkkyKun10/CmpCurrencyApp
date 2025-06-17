@@ -1,4 +1,4 @@
-package com.riezki.cmpcurrencyapp.presenter.`ui/them`.theme
+package com.riezki.cmpcurrencyapp.presenter.ui.theme
 
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme

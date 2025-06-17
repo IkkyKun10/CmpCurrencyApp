@@ -1,8 +1,8 @@
 package com.riezki.cmpcurrencyapp.domain.data.model
 
 import androidx.compose.ui.graphics.Color
-import com.riezki.cmpcurrencyapp.presenter.`ui/them`.theme.freshColor
-import com.riezki.cmpcurrencyapp.presenter.`ui/them`.theme.staleColor
+import com.riezki.cmpcurrencyapp.presenter.ui.theme.freshColor
+import com.riezki.cmpcurrencyapp.presenter.ui.theme.staleColor
 
 /**
  * @author riezky maisyar

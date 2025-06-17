@@ -14,9 +14,11 @@ import androidx.compose.ui.Modifier
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.koin.koinScreenModel
 import com.riezki.cmpcurrencyapp.domain.data.model.CurrencyType
+import com.riezki.cmpcurrencyapp.presenter.component.CurrencyPickerDialog
+import com.riezki.cmpcurrencyapp.presenter.component.HomeBody
 import com.riezki.cmpcurrencyapp.presenter.component.HomeHeader
 import com.riezki.cmpcurrencyapp.presenter.event.UiEvent
-import com.riezki.cmpcurrencyapp.presenter.`ui/them`.theme.surfaceColor
+import com.riezki.cmpcurrencyapp.presenter.ui.theme.surfaceColor
 
 /**
  * @author riezky maisyar
@@ -35,6 +37,30 @@ class HomeScreen : Screen {
         var amount by rememberSaveable { mutableDoubleStateOf(0.0) }
         var selectedCurrencyType: CurrencyType by remember {
             mutableStateOf(CurrencyType.None)
+        }
+
+        var dialogOpened by remember { mutableStateOf(false) }
+
+        if (dialogOpened && selectedCurrencyType != CurrencyType.None) {
+            CurrencyPickerDialog(
+                currency = allCurrencies,
+                currencyType = selectedCurrencyType,
+                onConfirmClick = { currencyCode ->
+                    if (selectedCurrencyType is CurrencyType.Source) {
+                        viewModel.sendEvent(
+                            UiEvent.SaveSourceCurrencyCode(currencyCode.name)
+                        )
+                    } else if (selectedCurrencyType is CurrencyType.Target) {
+                        UiEvent.SaveTargetCurrencyCode(currencyCode.name)
+                    }
+                    selectedCurrencyType = CurrencyType.None
+                    dialogOpened = false
+                },
+                onDismiss = {
+                    selectedCurrencyType = CurrencyType.None
+                    dialogOpened = false
+                }
+            )
         }
 
         Column(
@@ -61,8 +87,14 @@ class HomeScreen : Screen {
                     )
                 },
                 onCurrencyTypeSelect = {
-
+                    selectedCurrencyType = it
+                    dialogOpened = true
                 }
+            )
+            HomeBody(
+                source = sourceCurrency,
+                target = targetCurrency,
+                amount = amount
             )
         }
     }

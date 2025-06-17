@@ -13,6 +13,8 @@ import com.riezki.cmpcurrencyapp.domain.PreferencesRepository
 import com.riezki.cmpcurrencyapp.domain.data.model.RateStatus
 import com.riezki.cmpcurrencyapp.domain.data.utils.RequestState
 import com.riezki.cmpcurrencyapp.presenter.event.UiEvent
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.IO
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
@@ -46,13 +48,24 @@ class HomeViewModel(
             is UiEvent.RefreshRate -> {
                 screenModelScope.launch {
                     fetchNewRates()
-                    getRates()
                 }
             }
             UiEvent.SwitchCurrencies -> switchCurrency()
 
-            is UiEvent.SaveSourceCurrencyCode -> TODO()
-            is UiEvent.SaveTargetCurrencyCode -> TODO()
+            is UiEvent.SaveSourceCurrencyCode -> saveSourceCurrencyCode(event.code)
+            is UiEvent.SaveTargetCurrencyCode -> saveTargetCurrencyCode(event.code)
+        }
+    }
+
+    private fun saveSourceCurrencyCode(code: String) {
+        screenModelScope.launch(Dispatchers.IO) {
+            preference.saveSourceCurrencyCode(code)
+        }
+    }
+
+    private fun saveTargetCurrencyCode(code: String) {
+        screenModelScope.launch(Dispatchers.IO) {
+            preference.saveTargetCurrencyCode(code)
         }
     }
 

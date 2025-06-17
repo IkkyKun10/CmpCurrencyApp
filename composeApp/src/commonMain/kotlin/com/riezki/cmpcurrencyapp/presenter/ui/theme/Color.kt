@@ -1,4 +1,4 @@
-package com.riezki.cmpcurrencyapp.presenter.`ui/them`.theme
+package com.riezki.cmpcurrencyapp.presenter.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable

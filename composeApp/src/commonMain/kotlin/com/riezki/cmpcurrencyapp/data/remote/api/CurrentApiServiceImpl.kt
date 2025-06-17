@@ -84,8 +84,8 @@ class CurrentApiServiceImpl(
     }
 
     companion object {
-        const val HOST_URL = "api.currencyapi.com/v3"
-        const val ENDPOINT_LATEST = "latest"
+        const val HOST_URL = "api.currencyapi.com"
+        const val ENDPOINT_LATEST = "v3/latest"
         const val API_KEY = "cur_live_YpO7NTM9L9HNmz12AnMtbnfFFZ1bTB0V5YdwzTFi"
     }
 }

@@ -6,13 +6,14 @@ android-targetSdk = "35"
 androidx-activity = "1.10.1"
 androidx-appcompat = "1.7.1"
 androidx-constraintlayout = "2.2.1"
-androidx-lifecycle = "2.9.0"
-composeMultiplatform = "1.8.1"
+androidx-lifecycle = "2.8.0"
+composeMultiplatform = "1.7.0"
 compose = "1.8.2"
 junit = "4.13.2"
 kotlin = "2.0.20"
 ktor = "3.0.1"
 date-time = "0.6.1"
+materialIconsExtended = "1.7.3"
 multiplatformSettings = "1.2.0"
 voyager = "1.1.0-beta03"
 koinCore = "4.0.1"
@@ -31,6 +32,7 @@ androidx-lifecycle-runtimeCompose = { module = "org.jetbrains.androidx.lifecycle
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
 
+material-icons-extended = { module = "org.jetbrains.compose.material:material-icons-extended", version.ref = "materialIconsExtended" }
 multiplatform-settings-no-arg = { module = "com.russhwolf:multiplatform-settings-no-arg", version.ref = "multiplatformSettings" }
 multiplatform-settings-coroutines = { module = "com.russhwolf:multiplatform-settings-coroutines", version.ref = "multiplatformSettings" }
 voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }

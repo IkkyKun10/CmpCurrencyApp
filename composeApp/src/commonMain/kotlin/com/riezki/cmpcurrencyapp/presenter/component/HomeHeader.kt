@@ -51,8 +51,8 @@ import com.riezki.cmpcurrencyapp.domain.data.utils.DisplayResult
 import com.riezki.cmpcurrencyapp.domain.data.utils.RequestState
 import com.riezki.cmpcurrencyapp.domain.data.utils.displayCurrentDateTime
 import com.riezki.cmpcurrencyapp.getPlatform
-import com.riezki.cmpcurrencyapp.presenter.`ui/them`.theme.headerColor
-import com.riezki.cmpcurrencyapp.presenter.`ui/them`.theme.staleColor
+import com.riezki.cmpcurrencyapp.presenter.ui.theme.headerColor
+import com.riezki.cmpcurrencyapp.presenter.ui.theme.staleColor
 import org.jetbrains.compose.resources.painterResource
 
 /**
@@ -249,7 +249,7 @@ fun CurrencyInput(
             onClick = {
                 if (source.isSuccess()) {
                     onCurrencyTypeSelect(
-                        CurrencyType.Source(
+                        CurrencyType.Target(
                             currencyCode = CurrencyCode.valueOf(
                                 target.getSuccessData().code
                             )
