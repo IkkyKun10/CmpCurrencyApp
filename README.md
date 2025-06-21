@@ -122,5 +122,5 @@ Distribusi di bawah MIT License. Untuk informasi lengkap, baca file `LICENSE`.
 
 ## 🪄 Screenshots
 
-<img src="assets/Android.gif" alt="Android App Demo" width="500">
+<img src="assets/Android.gif" alt="Android App Demo" width="300" height="640">
 🎥 ![IOS](assets/IOS.mp4)
