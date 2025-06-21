@@ -90,6 +90,8 @@ Aplikasi ini memungkinkan pengguna untuk mengonversi antara berbagai mata uang s
 - **Jetpack Compose Multiplatform**
 - **Ktor** – HTTP client
 - **Realm MongoDB** Realm Database by MongoDB
+- **Voyager** Compose Navigation for Kotlin Multiplatform
+- **Koin** Dependency Injection
 - **Kotlinx Coroutines**  
 - **Kotlinx Serialization**  
 - Android & SwiftUI UI integrations  
