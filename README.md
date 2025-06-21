@@ -122,4 +122,5 @@ Distribusi di bawah MIT License. Untuk informasi lengkap, baca file `LICENSE`.
 
 ## 🪄 Screenshots
 
-
+🎥 ![Android](assets/Android.mp4)
+🎥 ![IOS](assets/IOS.mp4)
