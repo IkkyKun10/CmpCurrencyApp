@@ -1,6 +1,6 @@
 # 🪙 CmpCurrencyApp
 
-**CmpCurrencyApp** adalah aplikasi konversi mata uang lintas platform (Android dan iOS) menggunakan **Kotlin Compose Multiplatform**, menampilkan UI komposabel dan kemampuan multiplatform Compose. Diilhami dari gaya aplikasi seperti CurrencyApp oleh lng8212.
+**CmpCurrencyApp** adalah aplikasi konversi mata uang lintas platform (Android dan iOS) menggunakan **Kotlin Compose Multiplatform**, menampilkan UI komposabel dan kemampuan multiplatform Compose.
 
 ---
 
@@ -122,5 +122,5 @@ Distribusi di bawah MIT License. Untuk informasi lengkap, baca file `LICENSE`.
 
 ## 🪄 Screenshots
 
-<img src="assets/Android.gif" alt="Android App Demo" width="300" height="640">
-🎥 ![IOS](assets/IOS.mp4)
+🎥 <img src="assets/Android.gif" alt="Android App Demo" width="300" height="640">
+🎥 <img src="assets/IOS.mp4" alt="IOS App Demo" width="300" height="640">
